@@ -4,27 +4,38 @@
   "description": "code-editor-server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/index.js",
     "dev": "nodemon src/index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/uuid": "^10.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "mongoose": "^8.14.2",
-    "socket.io": "^4.8.1"
+    "socket.io": "^4.8.1",
+    "uuid": "^11.1.0",
+    "yjs": "^13.6.26"
   },
   "devDependencies": {
     "@types/express": "^5.0.1",
     "@types/node": "^22.15.17",
     "@types/socket.io": "^3.0.2",
+    "@types/supertest": "^6.0.3",
+    "@vitest/ui": "^3.1.3",
+    "mongodb-memory-server": "^10.1.4",
     "nodemon": "^3.1.10",
+    "supertest": "^7.1.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.3"
   },
   "keywords": []
 }
